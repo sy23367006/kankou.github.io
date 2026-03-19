@@ -534,6 +534,141 @@
       line-height: 1.8;
     }
 
+    /* ── ROUTE SECTION ── */
+    .route-section {
+      max-width: 800px;
+      margin: 4rem auto 0;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,168,76,0.2);
+      padding: 2.5rem;
+    }
+
+    .route-header { margin-bottom: 2rem; }
+
+    .route-stats {
+      display: flex;
+      gap: 1px;
+      background: rgba(201,168,76,0.15);
+      margin-bottom: 2.5rem;
+    }
+
+    .route-stat {
+      flex: 1;
+      background: rgba(26,20,16,0.8);
+      padding: 1.2rem 1rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .route-stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .route-stat-num small {
+      font-size: 0.9rem;
+    }
+
+    .route-stat-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      color: rgba(250,247,242,0.45);
+    }
+
+    .route-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+    }
+
+    .route-steps::before {
+      content: '';
+      position: absolute;
+      left: 9px;
+      top: 12px;
+      bottom: 12px;
+      width: 1px;
+      background: linear-gradient(to bottom, rgba(201,168,76,0.6), rgba(201,168,76,0.15));
+    }
+
+    .route-step {
+      display: flex;
+      gap: 1.2rem;
+      padding: 1rem 0;
+    }
+
+    .route-step-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 2px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .start { background: var(--gold); }
+    .goal { background: var(--gold); box-shadow: 0 0 0 4px rgba(201,168,76,0.25); }
+    .sa-dot { background: #e74c3c; border: 2px solid rgba(231,76,60,0.5); }
+    .jct-dot { background: rgba(250,247,242,0.15); border: 2px solid rgba(250,247,242,0.3); }
+
+    .route-step-body { flex: 1; }
+
+    .route-step-name {
+      font-family: 'Shippori Mincho', serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--paper);
+      margin-bottom: 0.3rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .route-step-time {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 0.75rem;
+      color: var(--gold);
+      font-weight: 400;
+      letter-spacing: 0.05em;
+    }
+
+    .route-step-note {
+      font-size: 0.8rem;
+      line-height: 1.8;
+      color: rgba(250,247,242,0.55);
+      margin-bottom: 0.5rem;
+    }
+
+    .route-step-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .route-step-tags span {
+      font-size: 0.65rem;
+      color: #e74c3c;
+      border: 1px solid rgba(231,76,60,0.35);
+      padding: 0.2rem 0.55rem;
+      background: rgba(231,76,60,0.06);
+      letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 600px) {
+      .route-stats { flex-direction: row; }
+      .route-stat-num { font-size: 1.3rem; }
+      .route-section { padding: 1.5rem; }
+    }
+
     /* ── FOOTER ── */
     footer {
       background: #0d0b08;
@@ -703,6 +838,10 @@
 
     @media (max-width: 900px) { .onsen-grid { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 580px) { .onsen-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 900px) { .lunch-grid { grid-template-columns: 1fr !important; } }
+    @media (max-width: 700px) {
+      [style*="grid-template-columns:repeat(3,1fr)"] { grid-template-columns: 1fr !important; }
+    }
 
     /* ── ISHIKAWA SPOTS SECTION ── */
     .ishikawa-section {
@@ -1036,6 +1175,101 @@
   </div>
 </section>
 
+<!-- LUNCH SECTION: 恐竜博物館〜東尋坊 -->
+<section style="background:#faf7f0;padding:5rem 2rem;">
+  <div style="max-width:1200px;margin:0 auto;">
+
+    <div class="reveal" style="margin-bottom:3rem;">
+      <p class="section-label">🍽️ Lunch Recommendations</p>
+      <h2 class="section-title">恐竜博物館〜東尋坊<br>おすすめランチ3選</h2>
+      <p style="margin-top:1rem;font-size:0.9rem;line-height:2;color:var(--stone);max-width:560px;">
+        三国港で水揚げされた新鮮な海の幸を堪能できる東尋坊エリアのランチスポットをご紹介。恐竜博物館観光後の昼食にぴったりです。
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+
+      <!-- やまに水産 -->
+      <div class="reveal" style="background:white;border:1px solid var(--mist);overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(26,20,16,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="background:linear-gradient(135deg,#0d1f2d,#1a3a52);padding:1.8rem 1.5rem 1.2rem;position:relative;overflow:hidden;">
+          <div style="position:absolute;right:-0.5rem;top:-0.5rem;font-size:5rem;opacity:0.08;font-family:'Shippori Mincho',serif;font-weight:800;line-height:1;">海</div>
+          <div style="font-size:1.6rem;margin-bottom:0.4rem;">🦀</div>
+          <h3 style="font-family:'Shippori Mincho',serif;font-size:1.15rem;font-weight:700;color:white;margin-bottom:0.2rem;">やまに水産</h3>
+          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.75rem;color:rgba(201,168,76,0.9);letter-spacing:0.1em;">Yamani Suisan — Tojinbo's Most Popular</p>
+        </div>
+        <div style="padding:1.3rem 1.5rem 1.5rem;">
+          <p style="font-size:0.82rem;line-height:1.9;color:var(--stone);margin-bottom:1rem;">創業80年の越前カニ料理専門店。三国産の魚介を卸す業者の直営店だけあって価格はリーズナブル。海鮮丼や定食、舟盛りなど50種類以上のメニューが揃い、600席の大箱でグループでも安心です。名物の「なぎさ汁」はカニと甘エビの出汁が絶品。</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-bottom:1rem;">
+            <span style="font-size:0.64rem;border:1px solid var(--mist);padding:0.2rem 0.55rem;background:var(--mist);color:var(--ink);">東尋坊No.1人気</span>
+            <span style="font-size:0.64rem;border:1px solid var(--mist);padding:0.2rem 0.55rem;background:var(--mist);color:var(--ink);">越前がに</span>
+            <span style="font-size:0.64rem;border:1px solid var(--mist);padding:0.2rem 0.55rem;background:var(--mist);color:var(--ink);">海鮮丼</span>
+            <span style="font-size:0.64rem;border:1px solid var(--mist);padding:0.2rem 0.55rem;background:var(--mist);color:var(--ink);">浜焼き</span>
+          </div>
+          <div style="border-top:1px solid var(--mist);padding-top:0.9rem;display:flex;flex-direction:column;gap:0.28rem;">
+            <div style="display:flex;gap:0.5rem;font-size:0.74rem;"><span style="color:var(--stone);min-width:4.5em;">営業時間</span><span style="color:var(--ink);font-weight:600;">8:30〜16:30（LO 16:00）</span></div>
+            <div style="display:flex;gap:0.5rem;font-size:0.74rem;"><span style="color:var(--stone);min-width:4.5em;">定休日</span><span style="color:var(--ink);font-weight:600;">年中無休</span></div>
+            <div style="display:flex;gap:0.5rem;font-size:0.74rem;"><span style="color:var(--stone);min-width:4.5em;">予算目安</span><span style="color:var(--ink);font-weight:600;">1,000〜3,000円</span></div>
+            <div style="display:flex;gap:0.5rem;font-size:0.74rem;"><span style="color:var(--stone);min-width:4.5em;">アクセス</span><span style="color:var(--ink);">東尋坊商店街内・徒歩3分</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 正太楼 -->
+      <div class="reveal" style="background:white;border:1px solid var(--mist);overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(26,20,16,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="background:linear-gradient(135deg,#1e1a10,#3a2e1a);padding:1.8rem 1.5rem 1.2rem;position:relative;overflow:hidden;">
+          <div style="position:absolute;right:-0.5rem;top:-0.5rem;font-size:5rem;opacity:0.08;font-family:'Shippori Mincho',serif;font-weight:800;line-height:1;">食</div>
+          <div style="font-size:1.6rem;margin-bottom:0.4rem;">🍱</div>
+          <h3 style="font-family:'Shippori Mincho',serif;font-size:1.15rem;font-weight:700;color:white;margin-bottom:0.2rem;">正太楼</h3>
+          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.75rem;color:rgba(201,168,76,0.9);letter-spacing:0.1em;">Shotaro — Diverse Japanese Cuisine</p>
+        </div>
+        <div style="padding:1.3rem 1.5rem 1.5rem;">
+          <p style="font-size:0.82rem;line-height:1.9;color:var(--stone);margin-bottom:1rem;">東尋坊商店街の中にある広々とした和風の食事処。新鮮な海鮮料理はもちろん、越前おろし蕎麦やソースカツ丼など福井名物も揃う万能店。店内はモダンで清潔感があり、タブレットオーダーで使いやすい。生魚が苦手な方も安心のメニュー構成。</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-bottom:1rem;">
+            <span style="font-size:0.64rem;border:1px solid var(--mist);padding:0.2rem 0.55rem;background:var(--mist);color:var(--ink);">越前おろし蕎麦</span>
+            <span style="font-size:0.64rem;border:1px solid var(--mist);padding:0.2rem 0.55rem;background:var(--mist);color:var(--ink);">ソースカツ丼</span>
+            <span style="font-size:0.64rem;border:1px solid var(--mist);padding:0.2rem 0.55rem;background:var(--mist);color:var(--ink);">海鮮丼</span>
+            <span style="font-size:0.64rem;border:1px solid var(--mist);padding:0.2rem 0.55rem;background:var(--mist);color:var(--ink);">お土産も充実</span>
+          </div>
+          <div style="border-top:1px solid var(--mist);padding-top:0.9rem;display:flex;flex-direction:column;gap:0.28rem;">
+            <div style="display:flex;gap:0.5rem;font-size:0.74rem;"><span style="color:var(--stone);min-width:4.5em;">営業時間</span><span style="color:var(--ink);font-weight:600;">9:00〜17:00</span></div>
+            <div style="display:flex;gap:0.5rem;font-size:0.74rem;"><span style="color:var(--stone);min-width:4.5em;">定休日</span><span style="color:var(--ink);font-weight:600;">不定休</span></div>
+            <div style="display:flex;gap:0.5rem;font-size:0.74rem;"><span style="color:var(--stone);min-width:4.5em;">予算目安</span><span style="color:var(--ink);font-weight:600;">1,000〜2,000円</span></div>
+            <div style="display:flex;gap:0.5rem;font-size:0.74rem;"><span style="color:var(--stone);min-width:4.5em;">アクセス</span><span style="color:var(--ink);">東尋坊商店街内</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 越前三国湊 海船や -->
+      <div class="reveal" style="background:white;border:1px solid var(--mist);overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(26,20,16,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="background:linear-gradient(135deg,#0a2a1a,#1a4a2a);padding:1.8rem 1.5rem 1.2rem;position:relative;overflow:hidden;">
+          <div style="position:absolute;right:-0.5rem;top:-0.5rem;font-size:5rem;opacity:0.08;font-family:'Shippori Mincho',serif;font-weight:800;line-height:1;">浜</div>
+          <div style="font-size:1.6rem;margin-bottom:0.4rem;">🌊</div>
+          <h3 style="font-family:'Shippori Mincho',serif;font-size:1.15rem;font-weight:700;color:white;margin-bottom:0.2rem;">越前三国湊 海船や</h3>
+          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.75rem;color:rgba(201,168,76,0.9);letter-spacing:0.1em;">Kaifuneya — Seafood by the Cliffs</p>
+        </div>
+        <div style="padding:1.3rem 1.5rem 1.5rem;">
+          <p style="font-size:0.82rem;line-height:1.9;color:var(--stone);margin-bottom:1rem;">東尋坊岩場前のやまに水産の姉妹店。断崖絶壁のすぐ目の前という絶好のロケーションで、新鮮な海鮮焼きから豪華丼まで幅広いメニューが揃います。観光の後に断崖を眺めながらゆっくりランチができるのが魅力。比較的空いていることも多く穴場的存在です。</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-bottom:1rem;">
+            <span style="font-size:0.64rem;border:1px solid var(--mist);padding:0.2rem 0.55rem;background:var(--mist);color:var(--ink);">岩場前の絶景</span>
+            <span style="font-size:0.64rem;border:1px solid var(--mist);padding:0.2rem 0.55rem;background:var(--mist);color:var(--ink);">海鮮焼き</span>
+            <span style="font-size:0.64rem;border:1px solid var(--mist);padding:0.2rem 0.55rem;background:var(--mist);color:var(--ink);">海鮮丼</span>
+            <span style="font-size:0.64rem;border:1px solid var(--mist);padding:0.2rem 0.55rem;background:var(--mist);color:var(--ink);">やまに水産姉妹店</span>
+          </div>
+          <div style="border-top:1px solid var(--mist);padding-top:0.9rem;display:flex;flex-direction:column;gap:0.28rem;">
+            <div style="display:flex;gap:0.5rem;font-size:0.74rem;"><span style="color:var(--stone);min-width:4.5em;">営業時間</span><span style="color:var(--ink);font-weight:600;">8:30〜16:30</span></div>
+            <div style="display:flex;gap:0.5rem;font-size:0.74rem;"><span style="color:var(--stone);min-width:4.5em;">定休日</span><span style="color:var(--ink);font-weight:600;">不定休</span></div>
+            <div style="display:flex;gap:0.5rem;font-size:0.74rem;"><span style="color:var(--stone);min-width:4.5em;">予算目安</span><span style="color:var(--ink);font-weight:600;">1,000〜2,000円</span></div>
+            <div style="display:flex;gap:0.5rem;font-size:0.74rem;"><span style="color:var(--stone);min-width:4.5em;">アクセス</span><span style="color:var(--ink);">東尋坊岩場前すぐ</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="margin-top:1.5rem;font-size:0.75rem;color:var(--stone);text-align:center;">※営業時間・定休日は変更になる場合があります。お出かけ前に各店舗へご確認ください。</p>
+  </div>
+</section>
+
 <!-- DIVIDER -->
 <div style="padding:2rem 0;background:var(--paper);">
   <div class="divider"><span class="divider-icon">✦</span></div>
@@ -1230,6 +1464,167 @@
       </div>
 
     </div>
+  </div>
+</section>
+
+<!-- ドライブルート＆グルメ: 東尋坊→道の駅→兼六園 -->
+<section style="background:var(--ink);padding:6rem 2rem;" id="drive-food">
+  <div style="max-width:1100px;margin:0 auto;">
+
+    <div class="reveal" style="margin-bottom:4rem;">
+      <p class="section-label" style="color:var(--gold);">🚗 Drive Route & Gourmet</p>
+      <h2 class="section-title" style="color:var(--paper);">東尋坊 → 道の駅 → 兼六園<br>ドライブルート＆グルメ案内</h2>
+    </div>
+
+    <!-- ルート① 東尋坊→道の駅めぐみ白山 -->
+    <div class="reveal" style="margin-bottom:4rem;">
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:var(--gold);line-height:1;">01</div>
+        <div>
+          <h3 style="font-family:'Shippori Mincho',serif;font-size:1.3rem;color:var(--paper);">東尋坊 → 道の駅めぐみ白山</h3>
+          <p style="font-size:0.78rem;color:rgba(250,247,242,0.5);letter-spacing:0.15em;font-family:'Cormorant Garamond',serif;font-style:italic;">国道305号 → 国道8号（石川方面）</p>
+        </div>
+      </div>
+      <div style="display:flex;gap:1px;background:rgba(201,168,76,0.2);margin-bottom:1.5rem;">
+        <div style="flex:1;background:rgba(26,20,16,0.9);padding:1.1rem;text-align:center;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--gold);">約55<small style="font-size:0.9rem;">km</small></div>
+          <div style="font-size:0.65rem;color:rgba(250,247,242,0.45);letter-spacing:0.1em;">総距離</div>
+        </div>
+        <div style="flex:1;background:rgba(26,20,16,0.9);padding:1.1rem;text-align:center;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--gold);">約1<small style="font-size:0.9rem;">時間</small></div>
+          <div style="font-size:0.65rem;color:rgba(250,247,242,0.45);letter-spacing:0.1em;">標準所要時間</div>
+        </div>
+        <div style="flex:1;background:rgba(26,20,16,0.9);padding:1.1rem;text-align:center;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--gold);">一般道<small style="font-size:0.9rem;">のみ</small></div>
+          <div style="font-size:0.65rem;color:rgba(250,247,242,0.45);letter-spacing:0.1em;">高速不要</div>
+        </div>
+      </div>
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,76,0.15);padding:1.4rem 1.8rem;font-size:0.83rem;line-height:2;color:rgba(250,247,242,0.65);">
+        東尋坊から国道305号（通称：恐竜街道）を北上 → 加賀市付近で国道8号に合流 → そのまま石川方面へ北上すると道の駅めぐみ白山に到着。海岸線沿いを走る眺めの良いルートで、福井・石川の県境を越える気持ちのいいドライブが楽しめます。小松市内を通過する際は渋滞に注意。
+      </div>
+    </div>
+
+    <!-- ルート② 道の駅→兼六園 -->
+    <div class="reveal" style="margin-bottom:4rem;">
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:var(--gold);line-height:1;">02</div>
+        <div>
+          <h3 style="font-family:'Shippori Mincho',serif;font-size:1.3rem;color:var(--paper);">道の駅めぐみ白山 → 兼六園</h3>
+          <p style="font-size:0.78rem;color:rgba(250,247,242,0.5);letter-spacing:0.15em;font-family:'Cormorant Garamond',serif;font-style:italic;">国道8号 → 金沢市内</p>
+        </div>
+      </div>
+      <div style="display:flex;gap:1px;background:rgba(201,168,76,0.2);margin-bottom:1.5rem;">
+        <div style="flex:1;background:rgba(26,20,16,0.9);padding:1.1rem;text-align:center;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--gold);">約25<small style="font-size:0.9rem;">km</small></div>
+          <div style="font-size:0.65rem;color:rgba(250,247,242,0.45);letter-spacing:0.1em;">総距離</div>
+        </div>
+        <div style="flex:1;background:rgba(26,20,16,0.9);padding:1.1rem;text-align:center;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--gold);">約30<small style="font-size:0.9rem;">分</small></div>
+          <div style="font-size:0.65rem;color:rgba(250,247,242,0.45);letter-spacing:0.1em;">標準所要時間</div>
+        </div>
+        <div style="flex:1;background:rgba(26,20,16,0.9);padding:1.1rem;text-align:center;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--gold);">無料<small style="font-size:0.9rem;">一般道</small></div>
+          <div style="font-size:0.65rem;color:rgba(250,247,242,0.45);letter-spacing:0.1em;">高速不要</div>
+        </div>
+      </div>
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,76,0.15);padding:1.4rem 1.8rem;font-size:0.83rem;line-height:2;color:rgba(250,247,242,0.65);">
+        道の駅から国道8号を金沢方面へ北上 → 金沢市内に入り兼六園方面の案内板に従う → 兼六園周辺の有料駐車場（石川県立美術館前・金沢城公園第二など）に駐車。市内は一方通行が多いため、カーナビ必携です。兼六園周辺の駐車場は土日祝に混雑するため、早めの到着を推奨。
+      </div>
+    </div>
+
+    <!-- 夜ご飯：道の駅周辺 -->
+    <div class="reveal" style="margin-bottom:3.5rem;">
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
+        <span style="font-size:1.5rem;">🍶</span>
+        <h3 style="font-family:'Shippori Mincho',serif;font-size:1.2rem;color:var(--paper);">道の駅周辺の夜ご飯おすすめ</h3>
+        <span style="font-size:0.75rem;color:rgba(250,247,242,0.4);font-family:'Cormorant Garamond',serif;font-style:italic;">白山市・松任エリア</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
+
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.15);padding:1.5rem;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.45)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.15)'">
+          <div style="font-size:1.3rem;margin-bottom:0.5rem;">🐟</div>
+          <div style="font-family:'Shippori Mincho',serif;font-size:0.98rem;color:var(--paper);margin-bottom:0.25rem;">居酒家 きっつえんさ</div>
+          <div style="font-size:0.7rem;color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:0.8rem;">Creative Izakaya — Matsuto</div>
+          <p style="font-size:0.78rem;line-height:1.8;color:rgba(250,247,242,0.6);margin-bottom:0.9rem;">松任駅近くで自家製食材や新鮮なお魚など地産地消にこだわる創作料理の居酒屋。ランチも大人気で地元の方に愛されるお店です。</p>
+          <div style="border-top:1px solid rgba(201,168,76,0.12);padding-top:0.8rem;display:flex;flex-direction:column;gap:0.22rem;">
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">予算</span><span style="color:rgba(250,247,242,0.75);">〜2,000円</span></div>
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">アクセス</span><span style="color:rgba(250,247,242,0.75);">道の駅から車で約10分</span></div>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.15);padding:1.5rem;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.45)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.15)'">
+          <div style="font-size:1.3rem;margin-bottom:0.5rem;">🍢</div>
+          <div style="font-family:'Shippori Mincho',serif;font-size:0.98rem;color:var(--paper);margin-bottom:0.25rem;">串酒場 いろどり</div>
+          <div style="font-size:0.7rem;color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:0.8rem;">Skewer Bar — Matsuto</div>
+          <p style="font-size:0.78rem;line-height:1.8;color:rgba(250,247,242,0.6);margin-bottom:0.9rem;">松任駅近く、炭火焼の串焼きや一品料理に加え、酒蔵から直仕入れの芋焼酎など約50種類のお酒が楽しめる居酒屋。じっくりお酒を嗜みたい夜に。</p>
+          <div style="border-top:1px solid rgba(201,168,76,0.12);padding-top:0.8rem;display:flex;flex-direction:column;gap:0.22rem;">
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">予算</span><span style="color:rgba(250,247,242,0.75);">〜3,000円</span></div>
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">アクセス</span><span style="color:rgba(250,247,242,0.75);">道の駅から車で約10分</span></div>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.15);padding:1.5rem;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.45)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.15)'">
+          <div style="font-size:1.3rem;margin-bottom:0.5rem;">🍱</div>
+          <div style="font-family:'Shippori Mincho',serif;font-size:0.98rem;color:var(--paper);margin-bottom:0.25rem;">旬味にしで</div>
+          <div style="font-size:0.7rem;color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:0.8rem;">Shunmi Nishide — Seasonal Japanese</div>
+          <p style="font-size:0.78rem;line-height:1.8;color:rgba(250,247,242,0.6);margin-bottom:0.9rem;">創業25年超、夫婦二人で営む白山市の和食の名店。日本海・白山の海山野の幸を丁寧に仕込んだ料理が揃います。個室（座敷）あり・予約推奨。</p>
+          <div style="border-top:1px solid rgba(201,168,76,0.12);padding-top:0.8rem;display:flex;flex-direction:column;gap:0.22rem;">
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">営業</span><span style="color:rgba(250,247,242,0.75);">17:00〜21:00（LO）要予約推奨</span></div>
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">予算</span><span style="color:rgba(250,247,242,0.75);">3,000〜5,000円</span></div>
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">アクセス</span><span style="color:rgba(250,247,242,0.75);">道の駅から車で約5分（白山市末広）</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ランチ：兼六園・ひがし茶屋街 -->
+    <div class="reveal">
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
+        <span style="font-size:1.5rem;">🍱</span>
+        <h3 style="font-family:'Shippori Mincho',serif;font-size:1.2rem;color:var(--paper);">兼六園・ひがし茶屋街エリアのランチ</h3>
+        <span style="font-size:0.75rem;color:rgba(250,247,242,0.4);font-family:'Cormorant Garamond',serif;font-style:italic;">金沢・観光エリア</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
+
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.15);padding:1.5rem;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.45)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.15)'">
+          <div style="font-size:1.3rem;margin-bottom:0.5rem;">🍜</div>
+          <div style="font-family:'Shippori Mincho',serif;font-size:0.98rem;color:var(--paper);margin-bottom:0.25rem;">兼六亭</div>
+          <div style="font-size:0.7rem;color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:0.8rem;">Kenrokutei — Inside Kenroku-en</div>
+          <p style="font-size:0.78rem;line-height:1.8;color:rgba(250,247,242,0.6);margin-bottom:0.9rem;">兼六園内の日本最古の噴水前にある料理屋で、金沢の郷土料理「治部煮」が名物。散策の途中にそのまま立ち寄れる極上のランチ体験。</p>
+          <div style="border-top:1px solid rgba(201,168,76,0.12);padding-top:0.8rem;display:flex;flex-direction:column;gap:0.22rem;">
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">予算</span><span style="color:rgba(250,247,242,0.75);">1,500〜3,500円</span></div>
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">営業</span><span style="color:rgba(250,247,242,0.75);">9:00〜16:00</span></div>
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">場所</span><span style="color:rgba(250,247,242,0.75);">兼六園内（入園料別途）</span></div>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.15);padding:1.5rem;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.45)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.15)'">
+          <div style="font-size:1.3rem;margin-bottom:0.5rem;">🥗</div>
+          <div style="font-family:'Shippori Mincho',serif;font-size:0.98rem;color:var(--paper);margin-bottom:0.25rem;">野の花 主計町</div>
+          <div style="font-size:0.7rem;color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:0.8rem;">Nononohana — Higashi Chaya Area</div>
+          <p style="font-size:0.78rem;line-height:1.8;color:rgba(250,247,242,0.6);margin-bottom:0.9rem;">ひがし茶屋街に近い主計町の浅野川沿いに佇む料理店で、「いち凛弁当」や「花かごランチ」など日本料理をベースに季節の食材を多彩に味わえる。要予約がおすすめ。</p>
+          <div style="border-top:1px solid rgba(201,168,76,0.12);padding-top:0.8rem;display:flex;flex-direction:column;gap:0.22rem;">
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">予算</span><span style="color:rgba(250,247,242,0.75);">2,000〜4,000円</span></div>
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">場所</span><span style="color:rgba(250,247,242,0.75);">金沢市主計町2-6</span></div>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.15);padding:1.5rem;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.45)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.15)'">
+          <div style="font-size:1.3rem;margin-bottom:0.5rem;">🐟</div>
+          <div style="font-family:'Shippori Mincho',serif;font-size:0.98rem;color:var(--paper);margin-bottom:0.25rem;">近江町市場 魚がし食堂</div>
+          <div style="font-size:0.7rem;color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:0.8rem;">Omicho Market Seafood — Local Favorite</div>
+          <p style="font-size:0.78rem;line-height:1.8;color:rgba(250,247,242,0.6);margin-bottom:0.9rem;">ボリュームたっぷりのグルメランチがリーズナブルに楽しめ、地元の方にも観光客にも人気の食堂。天ぷら・焼き物・刺身・海鮮丼など地元の海鮮をたっぷり味わえる定食メニューが揃う。</p>
+          <div style="border-top:1px solid rgba(201,168,76,0.12);padding-top:0.8rem;display:flex;flex-direction:column;gap:0.22rem;">
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">予算</span><span style="color:rgba(250,247,242,0.75);">800〜2,000円</span></div>
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">場所</span><span style="color:rgba(250,247,242,0.75);">近江町市場内（兼六園から約1km）</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <p style="margin-top:2rem;font-size:0.73rem;color:rgba(250,247,242,0.3);text-align:center;">※営業時間・定休日・料金は変更になる場合があります。事前にご確認ください。</p>
   </div>
 </section>
 
@@ -1483,9 +1878,89 @@
       <div class="access-desc">金沢市内に宿泊して<br>福井と金沢を<br>2泊3日で楽しめます</div>
     </div>
   </div>
-</section>
 
-<!-- FOOTER -->
+  <!-- 名古屋→恐竜博物館 ドライブルート -->
+  <div class="route-section reveal">
+    <div class="route-header">
+      <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.85rem;letter-spacing:0.3em;color:var(--gold);">Drive Route</p>
+      <h3 style="font-family:'Shippori Mincho',serif;font-size:1.6rem;font-weight:700;color:var(--paper);margin:0.3rem 0 0.5rem;">名古屋駅 → 恐竜博物館</h3>
+      <p style="font-size:0.82rem;color:rgba(250,247,242,0.55);letter-spacing:0.1em;">名神高速 → 米原JCT → 北陸自動車道 → 福井北IC → 国道416号</p>
+    </div>
+
+    <div class="route-stats">
+      <div class="route-stat">
+        <span class="route-stat-num">約240<small>km</small></span>
+        <span class="route-stat-label">総距離</span>
+      </div>
+      <div class="route-stat">
+        <span class="route-stat-num">約2.5<small>時間</small></span>
+        <span class="route-stat-label">標準所要時間</span>
+      </div>
+      <div class="route-stat">
+        <span class="route-stat-num">約4,500<small>円〜</small></span>
+        <span class="route-stat-label">高速料金（ETC目安）</span>
+      </div>
+    </div>
+
+    <div class="route-steps">
+      <div class="route-step">
+        <div class="route-step-dot start"></div>
+        <div class="route-step-body">
+          <div class="route-step-name">名古屋IC</div>
+          <div class="route-step-note">名神高速道路 へ乗る</div>
+        </div>
+      </div>
+
+      <div class="route-step sa">
+        <div class="route-step-dot sa-dot"></div>
+        <div class="route-step-body">
+          <div class="route-step-name">🛑 養老SA（下り）<span class="route-step-time">名古屋ICより約30分</span></div>
+          <div class="route-step-note">名古屋〜福井のちょうど中間。ドトールや飛騨牛サンドなど充実のグルメが揃う大型SA。朝の軽食・コーヒー休憩に最適。</div>
+          <div class="route-step-tags">
+            <span>ドトール</span><span>飛騨牛グルメ</span><span>名古屋めし</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="route-step junction">
+        <div class="route-step-dot jct-dot"></div>
+        <div class="route-step-body">
+          <div class="route-step-name">米原JCT</div>
+          <div class="route-step-note">北陸自動車道へ乗り換え（福井・金沢方面）</div>
+        </div>
+      </div>
+
+      <div class="route-step sa">
+        <div class="route-step-dot sa-dot"></div>
+        <div class="route-step-body">
+          <div class="route-step-name">🛑 南条SA（下り）<span class="route-step-time">名古屋ICより約1時間50分</span></div>
+          <div class="route-step-note">恐竜博物館直前の最後の大型SA。SA内に実物大の恐竜ロボット「フクイティタン」が登場。越前そばやコンビニ（ファミリーマート）あり。子どもが喜ぶ恐竜グッズも充実！</div>
+          <div class="route-step-tags">
+            <span>🦕 恐竜ロボット</span><span>越前そば</span><span>ファミマ併設</span><span>お土産充実</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="route-step junction">
+        <div class="route-step-dot jct-dot"></div>
+        <div class="route-step-body">
+          <div class="route-step-name">福井北IC で降りる</div>
+          <div class="route-step-note">国道416号・県道を経由して勝山方面へ約40分</div>
+        </div>
+      </div>
+
+      <div class="route-step">
+        <div class="route-step-dot goal"></div>
+        <div class="route-step-body">
+          <div class="route-step-name">福井県立恐竜博物館 🦕</div>
+          <div class="route-step-note">名古屋ICから約2時間30〜40分で到着！</div>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top:1.5rem;font-size:0.75rem;color:rgba(250,247,242,0.35);text-align:center;">※所要時間・料金は目安です。渋滞・時間帯により異なります。お出かけ前に最新情報をご確認ください。</p>
+  </div>
+</section>
 <footer>
   <div class="footer-logo">北陸・飛騨の旅</div>
   <p>© 2025 Hokuriku & Hida Tourism Guide — 福井・金沢・飛騨・下呂の旅へようこそ</p>
