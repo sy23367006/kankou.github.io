@@ -841,6 +841,10 @@
     @media (max-width: 900px) { .lunch-grid { grid-template-columns: 1fr !important; } }
     @media (max-width: 700px) {
       [style*="grid-template-columns:repeat(3,1fr)"] { grid-template-columns: 1fr !important; }
+      [style*="grid-template-columns:repeat(4,1fr)"] { grid-template-columns: 1fr 1fr !important; }
+    }
+    @media (max-width: 480px) {
+      [style*="grid-template-columns:repeat(4,1fr)"] { grid-template-columns: 1fr !important; }
     }
 
     /* ── ISHIKAWA SPOTS SECTION ── */
@@ -1047,19 +1051,6 @@
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">北陸・飛騨の<span>旅</span></a>
-  <ul class="nav-links" id="navLinks">
-    <li style="display:flex;justify-content:flex-end;padding-bottom:0.5rem;border-bottom:1px solid rgba(201,168,76,0.2);">
-      <button onclick="closeNav()" style="background:none;border:1px solid rgba(201,168,76,0.4);color:var(--gold);font-size:1.2rem;width:2.2rem;height:2.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;">✕</button>
-    </li>
-    <li><a href="#fukui" onclick="closeNav()">福井</a></li>
-    <li><a href="#kanazawa" onclick="closeNav()">金沢</a></li>
-    <li><a href="#ishikawa" onclick="closeNav()">石川の立ち寄り</a></li>
-    <li><a href="#onsen" onclick="closeNav()">飛騨・下呂の湯</a></li>
-    <li><a href="#access" onclick="closeNav()">アクセス</a></li>
-  </ul>
-  <div class="nav-hamburger" id="hamburger" onclick="toggleNav()">
-    <span></span><span></span><span></span>
-  </div>
 </nav>
 
 <!-- HERO -->
@@ -1473,7 +1464,7 @@
 
     <div class="reveal" style="margin-bottom:4rem;">
       <p class="section-label" style="color:var(--gold);">🚗 Drive Route & Gourmet</p>
-      <h2 class="section-title" style="color:var(--paper);">東尋坊 → 道の駅 → 兼六園<br>ドライブルート＆グルメ案内</h2>
+      <h2 class="section-title" style="color:var(--paper);">東尋坊 → 道の駅 → 兼六園<br>ドライブルート・立ち寄りスポット＆グルメ案内</h2>
     </div>
 
     <!-- ルート① 東尋坊→道の駅めぐみ白山 -->
@@ -1529,6 +1520,129 @@
       </div>
       <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,76,0.15);padding:1.4rem 1.8rem;font-size:0.83rem;line-height:2;color:rgba(250,247,242,0.65);">
         道の駅から国道8号を金沢方面へ北上 → 金沢市内に入り兼六園方面の案内板に従う → 兼六園周辺の有料駐車場（石川県立美術館前・金沢城公園第二など）に駐車。市内は一方通行が多いため、カーナビ必携です。兼六園周辺の駐車場は土日祝に混雑するため、早めの到着を推奨。
+      </div>
+    </div>
+
+    <!-- 立ち寄りスポット：東尋坊〜道の駅 -->
+    <div class="reveal" style="margin-bottom:3.5rem;">
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
+        <span style="font-size:1.5rem;">📍</span>
+        <h3 style="font-family:'Shippori Mincho',serif;font-size:1.2rem;color:var(--paper);">東尋坊〜道の駅 ルートの立ち寄りスポット</h3>
+        <span style="font-size:0.75rem;color:rgba(250,247,242,0.4);font-family:'Cormorant Garamond',serif;font-style:italic;">福井〜石川・加賀エリア</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
+
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.15);padding:1.5rem;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.45)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.15)'">
+          <div style="font-size:1.3rem;margin-bottom:0.5rem;">⛵</div>
+          <div style="font-family:'Shippori Mincho',serif;font-size:0.98rem;color:var(--paper);margin-bottom:0.25rem;">三国湊レトロ</div>
+          <div style="font-size:0.7rem;color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:0.8rem;">Mikuni Minato — Historic Port Town</div>
+          <p style="font-size:0.78rem;line-height:1.8;color:rgba(250,247,242,0.6);margin-bottom:0.9rem;">江戸から明治にかけて北前船交易で栄えた三国湊町。今も格子戸が連なる町家・豪商の面影が残り、レトロな町並みが散策にぴったり。旧森田銀行本店（国登録有形文化財）や旧岸名家（かぐら建て）など見どころが凝縮。東尋坊から車で約8分とアクセス抜群。</p>
+          <div style="border-top:1px solid rgba(201,168,76,0.12);padding-top:0.8rem;display:flex;flex-direction:column;gap:0.22rem;">
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">入場</span><span style="color:rgba(250,247,242,0.75);">旧岸名家など一部有料</span></div>
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">アクセス</span><span style="color:rgba(250,247,242,0.75);">東尋坊から車で約8分</span></div>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.15);padding:1.5rem;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.45)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.15)'">
+          <div style="font-size:1.3rem;margin-bottom:0.5rem;">🍁</div>
+          <div style="font-family:'Shippori Mincho',serif;font-size:0.98rem;color:var(--paper);margin-bottom:0.25rem;">那谷寺</div>
+          <div style="font-size:0.7rem;color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:0.8rem;">Natadera Temple — Michelin 1 Star</div>
+          <p style="font-size:0.78rem;line-height:1.8;color:rgba(250,247,242,0.6);margin-bottom:0.9rem;">717年開創の真言宗の古刹で、苔むした境内に国重要文化財の堂宇が立ち並ぶ。「奇岩遊仙境」と称される山水画のような景色が絶景で、ミシュラン1つ星認定。秋の紅葉は北陸屈指の美しさ。道の駅から寄り道に最適。</p>
+          <div style="border-top:1px solid rgba(201,168,76,0.12);padding-top:0.8rem;display:flex;flex-direction:column;gap:0.22rem;">
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">拝観料</span><span style="color:rgba(250,247,242,0.75);">大人1,000円 / 9:15〜16:00</span></div>
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">アクセス</span><span style="color:rgba(250,247,242,0.75);">道の駅から車で約30分（小松IC方面）</span></div>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.15);padding:1.5rem;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.45)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.15)'">
+          <div style="font-size:1.3rem;margin-bottom:0.5rem;">🌸</div>
+          <div style="font-family:'Shippori Mincho',serif;font-size:0.98rem;color:var(--paper);margin-bottom:0.25rem;">山中温泉 鶴仙渓</div>
+          <div style="font-size:0.7rem;color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:0.8rem;">Yamanaka Onsen — Kakusenkei Gorge</div>
+          <p style="font-size:0.78rem;line-height:1.8;color:rgba(250,247,242,0.6);margin-bottom:0.9rem;">大聖寺川沿いに広がる渓谷で、松尾芭蕉がその美しさに滞在を延ばしたと伝えられる北陸随一の湯処。総檜造りの「こおろぎ橋」は絶好の撮影スポット。足湯や温泉街の散策もセットで楽しめます。</p>
+          <div style="border-top:1px solid rgba(201,168,76,0.12);padding-top:0.8rem;display:flex;flex-direction:column;gap:0.22rem;">
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">入場</span><span style="color:rgba(250,247,242,0.75);">渓谷散策無料</span></div>
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">アクセス</span><span style="color:rgba(250,247,242,0.75);">道の駅から車で約45分（加賀IC経由）</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 立ち寄りスポット：金沢エリア -->
+    <div class="reveal" style="margin-bottom:3.5rem;">
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
+        <span style="font-size:1.5rem;">🏯</span>
+        <h3 style="font-family:'Shippori Mincho',serif;font-size:1.2rem;color:var(--paper);">金沢のおすすめ観光スポット</h3>
+        <span style="font-size:0.75rem;color:rgba(250,247,242,0.4);font-family:'Cormorant Garamond',serif;font-style:italic;">兼六園・ひがし茶屋街以外</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
+
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.15);padding:1.5rem;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.45)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.15)'">
+          <div style="font-size:1.3rem;margin-bottom:0.5rem;">🏯</div>
+          <div style="font-family:'Shippori Mincho',serif;font-size:0.98rem;color:var(--paper);margin-bottom:0.25rem;">金沢城公園</div>
+          <div style="font-size:0.7rem;color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:0.8rem;">Kanazawa Castle Park</div>
+          <p style="font-size:0.78rem;line-height:1.8;color:rgba(250,247,242,0.6);margin-bottom:0.9rem;">兼六園に隣接する加賀藩前田家の居城跡。復元された五十間長屋・菱櫓や玉泉院丸庭園が見どころ。石川門（重要文化財）は必見。入場無料で兼六園と一緒に回れる好立地。</p>
+          <div style="border-top:1px solid rgba(201,168,76,0.12);padding-top:0.8rem;display:flex;flex-direction:column;gap:0.22rem;">
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">入場</span><span style="color:rgba(250,247,242,0.75);">無料（一部有料施設あり）</span></div>
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">場所</span><span style="color:rgba(250,247,242,0.75);">兼六園すぐ隣</span></div>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.15);padding:1.5rem;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.45)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.15)'">
+          <div style="font-size:1.3rem;margin-bottom:0.5rem;">🎨</div>
+          <div style="font-family:'Shippori Mincho',serif;font-size:0.98rem;color:var(--paper);margin-bottom:0.25rem;">金沢21世紀美術館</div>
+          <div style="font-size:0.7rem;color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:0.8rem;">21st Century Museum of Contemporary Art</div>
+          <p style="font-size:0.78rem;line-height:1.8;color:rgba(250,247,242,0.6);margin-bottom:0.9rem;">円形の建物に360度どこからでも入れる「まちに開かれた美術館」。無料ゾーンだけでも屋外アート作品が楽しめ、レアンドロの「スイミング・プール」は必見。兼六園から徒歩すぐ。</p>
+          <div style="border-top:1px solid rgba(201,168,76,0.12);padding-top:0.8rem;display:flex;flex-direction:column;gap:0.22rem;">
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">入場</span><span style="color:rgba(250,247,242,0.75);">無料ゾーンあり・展覧会は有料</span></div>
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">場所</span><span style="color:rgba(250,247,242,0.75);">兼六園から徒歩約5分</span></div>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.15);padding:1.5rem;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.45)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.15)'">
+          <div style="font-size:1.3rem;margin-bottom:0.5rem;">🏠</div>
+          <div style="font-family:'Shippori Mincho',serif;font-size:0.98rem;color:var(--paper);margin-bottom:0.25rem;">長町武家屋敷跡界隈</div>
+          <div style="font-size:0.7rem;color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:0.8rem;">Nagamachi Samurai District</div>
+          <p style="font-size:0.78rem;line-height:1.8;color:rgba(250,247,242,0.6);margin-bottom:0.9rem;">土塀と石畳が続く加賀藩士の屋敷跡が今も残る金沢有数の風情エリア。野村家の武家屋敷は内部見学可能。朝の散策や着物での町歩きにも最適です。</p>
+          <div style="border-top:1px solid rgba(201,168,76,0.12);padding-top:0.8rem;display:flex;flex-direction:column;gap:0.22rem;">
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">入場</span><span style="color:rgba(250,247,242,0.75);">散策無料（野村家 550円〜）</span></div>
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">場所</span><span style="color:rgba(250,247,242,0.75);">金沢駅からバスで約15分</span></div>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.15);padding:1.5rem;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.45)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.15)'">
+          <div style="font-size:1.3rem;margin-bottom:0.5rem;">🐟</div>
+          <div style="font-family:'Shippori Mincho',serif;font-size:0.98rem;color:var(--paper);margin-bottom:0.25rem;">近江町市場</div>
+          <div style="font-size:0.7rem;color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:0.8rem;">Omicho Market — Kanazawa's Kitchen</div>
+          <p style="font-size:0.78rem;line-height:1.8;color:rgba(250,247,242,0.6);margin-bottom:0.9rem;">1721年から加賀藩前田家の御膳所として約300年間、金沢市民の台所として賑わう市場。約170店が並ぶ。新鮮な海鮮の食べ歩きや海鮮丼がリーズナブルに楽しめ、朝食・ランチに最適。</p>
+          <div style="border-top:1px solid rgba(201,168,76,0.12);padding-top:0.8rem;display:flex;flex-direction:column;gap:0.22rem;">
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">営業</span><span style="color:rgba(250,247,242,0.75);">9:00〜17:00頃（店舗により異なる）</span></div>
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">場所</span><span style="color:rgba(250,247,242,0.75);">金沢駅からバスで約5分</span></div>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.15);padding:1.5rem;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.45)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.15)'">
+          <div style="font-size:1.3rem;margin-bottom:0.5rem;">⛩️</div>
+          <div style="font-family:'Shippori Mincho',serif;font-size:0.98rem;color:var(--paper);margin-bottom:0.25rem;">尾山神社</div>
+          <div style="font-size:0.7rem;color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:0.8rem;">Oyama Shrine — Unique Stained Glass Gate</div>
+          <p style="font-size:0.78rem;line-height:1.8;color:rgba(250,247,242,0.6);margin-bottom:0.9rem;">前田利家を祀る神社で、和洋漢の三様式が合体した国重文指定の神門が見どころ。特に夜はステンドグラスがライトアップされてとても美しい。境内のなでしこ庭園も必見。</p>
+          <div style="border-top:1px solid rgba(201,168,76,0.12);padding-top:0.8rem;display:flex;flex-direction:column;gap:0.22rem;">
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">拝観</span><span style="color:rgba(250,247,242,0.75);">9:00〜17:00（無料）</span></div>
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">場所</span><span style="color:rgba(250,247,242,0.75);">金沢駅からバスで約15分</span></div>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.15);padding:1.5rem;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.45)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.15)'">
+          <div style="font-size:1.3rem;margin-bottom:0.5rem;">🥷</div>
+          <div style="font-family:'Shippori Mincho',serif;font-size:0.98rem;color:var(--paper);margin-bottom:0.25rem;">妙立寺（忍者寺）</div>
+          <div style="font-size:0.7rem;color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:0.8rem;">Myoryuji Temple — Ninja Temple</div>
+          <p style="font-size:0.78rem;line-height:1.8;color:rgba(250,247,242,0.6);margin-bottom:0.9rem;">外観は2階建てに見えるが内部は7層に及ぶ複雑な構造を持つ。落とし穴・隠し階段・切腹の間など数多くの仕掛けがあり「忍者寺」の異名を持つ。要予約（拝観は案内付きのみ）。</p>
+          <div style="border-top:1px solid rgba(201,168,76,0.12);padding-top:0.8rem;display:flex;flex-direction:column;gap:0.22rem;">
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">拝観料</span><span style="color:rgba(250,247,242,0.75);">1,200円・要電話予約</span></div>
+            <div style="display:flex;gap:0.4rem;font-size:0.72rem;"><span style="color:rgba(250,247,242,0.38);min-width:4em;">場所</span><span style="color:rgba(250,247,242,0.75);">金沢駅からバスで約15分</span></div>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -1846,6 +1960,145 @@
         <p style="font-size:0.8rem;line-height:1.9;color:rgba(250,247,242,0.65);">
           下呂温泉では「湯めぐり手形」（1,300円）を使うと、参加旅館3ヶ所を選んで入浴できてお得です。温泉街散策と組み合わせて複数の名湯を巡るのがおすすめ。手形は各旅館フロントや観光案内所で購入できます。
         </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- お土産セクション -->
+<section style="background:var(--paper);padding:7rem 2rem;" id="omiyage">
+  <div style="max-width:1200px;margin:0 auto;">
+
+    <div class="reveal" style="text-align:center;margin-bottom:4rem;">
+      <p class="section-label">🎁 Souvenirs</p>
+      <h2 class="section-title">お土産おすすめ</h2>
+      <p style="margin-top:1rem;font-size:0.9rem;line-height:2;color:var(--stone);max-width:560px;margin-left:auto;margin-right:auto;">
+        福井と金沢、それぞれの地域ならではの銘品を厳選。旅の締めくくりにぜひ手に取ってみてください。
+      </p>
+    </div>
+
+    <!-- 福井のお土産 -->
+    <div class="reveal" style="margin-bottom:4rem;">
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:2rem;">
+        <div style="font-family:'Shippori Mincho',serif;font-size:2rem;font-weight:800;color:var(--gold);line-height:1;">福</div>
+        <div>
+          <h3 style="font-family:'Shippori Mincho',serif;font-size:1.3rem;color:var(--ink);">福井のお土産</h3>
+          <p style="font-size:0.75rem;color:var(--stone);font-family:'Cormorant Garamond',serif;font-style:italic;">Fukui Souvenirs</p>
+        </div>
+        <div style="flex:1;height:1px;background:linear-gradient(to right,var(--gold-light),transparent);margin-left:0.5rem;"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;">
+
+        <div class="omiyage-card" style="background:white;border:1px solid var(--mist);padding:1.5rem;transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 30px rgba(26,20,16,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+          <div style="font-size:1.5rem;margin-bottom:0.6rem;">🍡</div>
+          <div style="font-family:'Shippori Mincho',serif;font-size:0.95rem;font-weight:700;color:var(--ink);margin-bottom:0.2rem;">羽二重餅</div>
+          <div style="font-size:0.68rem;color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:0.7rem;">Habutae-mochi</div>
+          <p style="font-size:0.76rem;line-height:1.8;color:var(--stone);margin-bottom:0.8rem;">絹織物「羽二重織」にちなんだ福井を代表する銘菓で、絹のようにふわりやわらかく上品な甘さが特徴。明治30年創業の発祥の店「松岡軒」が元祖。</p>
+          <div style="font-size:0.7rem;color:var(--stone);border-top:1px solid var(--mist);padding-top:0.6rem;">
+            <div>📍 恐竜博物館・東尋坊のお土産店、福井駅</div>
+            <div style="margin-top:0.2rem;">💰 500円〜</div>
+          </div>
+        </div>
+
+        <div class="omiyage-card" style="background:white;border:1px solid var(--mist);padding:1.5rem;transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 30px rgba(26,20,16,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+          <div style="font-size:1.5rem;margin-bottom:0.6rem;">🦖</div>
+          <div style="font-family:'Shippori Mincho',serif;font-size:0.95rem;font-weight:700;color:var(--ink);margin-bottom:0.2rem;">恐竜グッズ</div>
+          <div style="font-size:0.68rem;color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:0.7rem;">Dinosaur Items</div>
+          <p style="font-size:0.76rem;line-height:1.8;color:var(--stone);margin-bottom:0.8rem;">恐竜博物館で販売されている羽二重餅はパッケージもかわいくて人気。フィギュアや文具など恐竜モチーフのグッズは子どもへのお土産に最適。</p>
+          <div style="font-size:0.7rem;color:var(--stone);border-top:1px solid var(--mist);padding-top:0.6rem;">
+            <div>📍 恐竜博物館ミュージアムショップ</div>
+            <div style="margin-top:0.2rem;">💰 300円〜</div>
+          </div>
+        </div>
+
+        <div class="omiyage-card" style="background:white;border:1px solid var(--mist);padding:1.5rem;transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 30px rgba(26,20,16,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+          <div style="font-size:1.5rem;margin-bottom:0.6rem;">🟡</div>
+          <div style="font-family:'Shippori Mincho',serif;font-size:0.95rem;font-weight:700;color:var(--ink);margin-bottom:0.2rem;">水ようかん</div>
+          <div style="font-size:0.68rem;color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:0.7rem;">Mizu Yokan</div>
+          <p style="font-size:0.76rem;line-height:1.8;color:var(--stone);margin-bottom:0.8rem;">全国でも珍しい「冬の水ようかん」文化が根付く福井。11月〜3月の期間限定品で、こくのある甘さが特徴。冬に訪れたなら迷わず買うべき逸品。</p>
+          <div style="font-size:0.7rem;color:var(--stone);border-top:1px solid var(--mist);padding-top:0.6rem;">
+            <div>📍 福井駅・道の駅めぐみ白山</div>
+            <div style="margin-top:0.2rem;">💰 500円〜（11〜3月限定）</div>
+          </div>
+        </div>
+
+        <div class="omiyage-card" style="background:white;border:1px solid var(--mist);padding:1.5rem;transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 30px rgba(26,20,16,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+          <div style="font-size:1.5rem;margin-bottom:0.6rem;">🦐</div>
+          <div style="font-family:'Shippori Mincho',serif;font-size:0.95rem;font-weight:700;color:var(--ink);margin-bottom:0.2rem;">甘えびせんべい</div>
+          <div style="font-size:0.68rem;color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:0.7rem;">Sweet Shrimp Senbei</div>
+          <p style="font-size:0.76rem;line-height:1.8;color:var(--stone);margin-bottom:0.8rem;">福井の特産である甘えびの他、イカやタコがそのままの姿でせんべいに。その姿形に驚く人も多いが、一口食べてさらに驚くほど美味い珍しいお土産。</p>
+          <div style="font-size:0.7rem;color:var(--stone);border-top:1px solid var(--mist);padding-top:0.6rem;">
+            <div>📍 東尋坊商店街・福井駅</div>
+            <div style="margin-top:0.2rem;">💰 600円〜</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 金沢のお土産 -->
+    <div class="reveal">
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:2rem;">
+        <div style="font-family:'Shippori Mincho',serif;font-size:2rem;font-weight:800;color:var(--gold);line-height:1;">金</div>
+        <div>
+          <h3 style="font-family:'Shippori Mincho',serif;font-size:1.3rem;color:var(--ink);">金沢のお土産</h3>
+          <p style="font-size:0.75rem;color:var(--stone);font-family:'Cormorant Garamond',serif;font-style:italic;">Kanazawa Souvenirs</p>
+        </div>
+        <div style="flex:1;height:1px;background:linear-gradient(to right,var(--gold-light),transparent);margin-left:0.5rem;"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;">
+
+        <div class="omiyage-card" style="background:white;border:1px solid var(--mist);padding:1.5rem;transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 30px rgba(26,20,16,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+          <div style="font-size:1.5rem;margin-bottom:0.6rem;">🍡</div>
+          <div style="font-family:'Shippori Mincho',serif;font-size:0.95rem;font-weight:700;color:var(--ink);margin-bottom:0.2rem;">きんつば（中田屋）</div>
+          <div style="font-size:0.68rem;color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:0.7rem;">Kintsubo — Nakataya</div>
+          <p style="font-size:0.76rem;line-height:1.8;color:var(--stone);margin-bottom:0.8rem;">金沢百番街で買える金沢土産の定番で、きんつば中田屋のきんつばは北海道産大納言小豆をぎっしり詰めた金沢を代表する銘菓。個包装で配りやすい。</p>
+          <div style="font-size:0.7rem;color:var(--stone);border-top:1px solid var(--mist);padding-top:0.6rem;">
+            <div>📍 金沢百番街あんと・市内各所</div>
+            <div style="margin-top:0.2rem;">💰 200円〜/個</div>
+          </div>
+        </div>
+
+        <div class="omiyage-card" style="background:white;border:1px solid var(--mist);padding:1.5rem;transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 30px rgba(26,20,16,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+          <div style="font-size:1.5rem;margin-bottom:0.6rem;">✨</div>
+          <div style="font-family:'Shippori Mincho',serif;font-size:0.95rem;font-weight:700;color:var(--ink);margin-bottom:0.2rem;">YUKIZURI（ル ミュゼ）</div>
+          <div style="font-size:0.68rem;color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:0.7rem;">YUKIZURI — Le Musee de H</div>
+          <p style="font-size:0.76rem;line-height:1.8;color:var(--stone);margin-bottom:0.8rem;">金沢百番街あんとで買える洋菓子お土産の筆頭で、SNSでも話題のおしゃれなスイーツ。辻口博啓シェフによる兼六園の雪吊りをモチーフにした焼き菓子。</p>
+          <div style="font-size:0.7rem;color:var(--stone);border-top:1px solid var(--mist);padding-top:0.6rem;">
+            <div>📍 金沢百番街あんと</div>
+            <div style="margin-top:0.2rem;">💰 1,000円〜</div>
+          </div>
+        </div>
+
+        <div class="omiyage-card" style="background:white;border:1px solid var(--mist);padding:1.5rem;transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 30px rgba(26,20,16,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+          <div style="font-size:1.5rem;margin-bottom:0.6rem;">🏮</div>
+          <div style="font-family:'Shippori Mincho',serif;font-size:0.95rem;font-weight:700;color:var(--ink);margin-bottom:0.2rem;">加賀棒茶クッキー（丸八）</div>
+          <div style="font-size:0.68rem;color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:0.7rem;">Kaga Bocha Cookie — Maruhachi</div>
+          <p style="font-size:0.76rem;line-height:1.8;color:var(--stone);margin-bottom:0.8rem;">老舗「丸八製茶場」の献上加賀棒茶をふんだんに使い、保存料・着色料・香料無添加の「食べる加賀棒茶」をコンセプトにしたサクサクのワッフルクッキー。</p>
+          <div style="font-size:0.7rem;color:var(--stone);border-top:1px solid var(--mist);padding-top:0.6rem;">
+            <div>📍 金沢百番街・市内各所</div>
+            <div style="margin-top:0.2rem;">💰 800円〜</div>
+          </div>
+        </div>
+
+        <div class="omiyage-card" style="background:white;border:1px solid var(--mist);padding:1.5rem;transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 30px rgba(26,20,16,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+          <div style="font-size:1.5rem;margin-bottom:0.6rem;">🧂</div>
+          <div style="font-family:'Shippori Mincho',serif;font-size:0.95rem;font-weight:700;color:var(--ink);margin-bottom:0.2rem;">ミルクとしお</div>
+          <div style="font-size:0.68rem;color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:0.7rem;">Milk to Shio — Noto-inspired Wafer</div>
+          <p style="font-size:0.76rem;line-height:1.8;color:var(--stone);margin-bottom:0.8rem;">石川県の高校生が企画してSNSで話題沸騰。能登半島地震をきっかけに生まれた、能登産ミルクの甘さと能登塩のしょっぱさが絶妙なサクサクのゴーフル。</p>
+          <div style="font-size:0.7rem;color:var(--stone);border-top:1px solid var(--mist);padding-top:0.6rem;">
+            <div>📍 金沢百番街・市内各所</div>
+            <div style="margin-top:0.2rem;">💰 800円〜</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="reveal" style="margin-top:1.5rem;background:var(--mist);padding:1.2rem 1.8rem;display:flex;gap:1rem;align-items:flex-start;">
+        <span style="font-size:1.3rem;flex-shrink:0;">🛍️</span>
+        <p style="font-size:0.8rem;line-height:1.9;color:var(--stone);"><strong style="color:var(--ink);">お土産を買うなら「金沢百番街あんと」が便利。</strong>金沢駅直結の商業施設「金沢百番街あんと」なら、定番の金沢銘菓から話題のおしゃれな洋菓子まで揃います。帰りの新幹線・電車に乗る前にまとめて購入できて便利です。</p>
       </div>
     </div>
 
